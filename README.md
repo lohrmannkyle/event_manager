@@ -1,35 +1,42 @@
-# The Odin Project Ruby Exercises
+This is the Event Manager project on The Odin Project: Full Stack Ruby
 
-## About this repository
+# Learning Goals
 
-This repository is a complement to the Ruby course for The Odin Project. It contains a series of Ruby exercises alongside pre-written tests that will help guide the student towards a solution, providing a Test Driven Development experience.
+After completing this tutorial, you will be able to:
 
-Each set of exercises should only be done **after** being directed to do so in the assignment of the corresponding Ruby lesson. I.e. if you just finished the Basic Data Types lesson you should **only** do the exercises in the `1_data_types` folder for now.
+* manipulate file input and output
+* read content from a CSV (Comma Separated Value) file
+* transform it into a standardized format
+* utilize the data to contact a remote service
+* populate a template with user data
+* manipulate strings
+* access Google’s Civic Information API through the Google API Client Gem
+* use ERB (Embedded Ruby) for templating
 
-## Cloning and installation
+## Assignment: Clean Phone Numbers
 
-Clone this repository to your local machine. To do this, click on the green "Code" button at the top right of list of files and copy the link in the prompt. Then, run the following command in your terminal:
+Similar to the zip codes, the phone numbers suffer from multiple formats and inconsistencies. If we wanted to allow individuals to sign up for mobile alerts with the phone numbers, we would need to make sure all of the numbers are valid and well-formed.
 
-    git clone <link>
+* If the phone number is less than 10 digits, assume that it is a bad number
+* If the phone number is 10 digits, assume that it is good
+* If the phone number is 11 digits and the first number is 1, trim the 1 and use the first 10 digits
+* If the phone number is 11 digits and the first number is not 1, then it is a bad number
+* If the phone number is more than 11 digits, assume that it is a bad number
 
-This will create a folder called 'ruby-exercises' inside the directory you ran the command in.
+## Assignment: Time Targeting
 
-CD into that folder:
+The boss is already thinking about the next conference: “Next year I want to make better use of our Google and Facebook advertising. Find out which hours of the day the most people registered, so we can run more ads during those hours.” Interesting!
 
-    cd ruby-exercises
+Using the registration date and time we want to find out what the peak registration hours are.
 
-Now before beginning work on the exercises, you'll want to install a gem called RSpec. RSpec is a popular Ruby testing framework that is used in this repository to provide you with tests that check your solutions.
+* Ruby has Date and Time classes that will be very useful for this task.
 
-To install RSpec, run the following command in your terminal:
+* For a quick overview, check out this Ruby Guides article.
 
-    gem install rspec
+* Explore the documentation to become familiar with the available methods, especially #strptime, #strftime, and #hour.
 
-You should see a message saying "5 gems installed" in your terminal. Verify that the installation was successful by simply running the following command:
+## Assignment: Day of the Week Targeting
 
-    rspec
+The big boss gets excited about the results from your hourly tabulations. It looks like there are some hours that are clearly more important than others. But now, tantalized, she wants to know “What days of the week did most people register?”
 
-Which should print a few lines about not finding any examples. This is ok and means it's working!
-
-## Usage
-
-Each directory contains a read me with instructions for the exercises within them.
+* Use Date#wday to find out the day of the week.
